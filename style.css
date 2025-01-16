@@ -60,9 +60,11 @@ body {
   text-align: center;
 }
 
-.donate{
-  width: 90%;
-  margin: 0 auto;
+.donate,
+.donate-plan,
+.about {
+  width: 80%;
+  margin: 80px auto;
 }
 .donate-card-container {
   display: grid;
@@ -86,42 +88,109 @@ body {
   border: 2px solid #ff5c59;
   color: #ff5c59;
 }
-.donate-card:hover{
+.donate-card:hover {
   background-color: #caf8da8f;
   border: 2px solid #0d752e;
   color: #0d752e;
   cursor: pointer;
 }
-.donate .donate-input{
+.donate .donate-input {
   width: 100%;
   display: flex;
 }
 
-.donate input{
+.donate input {
   width: 70%;
   margin: 0 auto;
   text-align: center;
-  padding:10px;
+  padding: 10px;
   border: transparent;
   border-bottom: 1px solid gray;
   outline: none;
   font-size: 14px;
 }
-.donate .donate-btn{
+.donate .donate-btn {
   display: flex;
   align-items: center;
   justify-content: center;
   margin-top: 20px;
 }
 
+.donate-plan-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-top: 50px;
+}
+.donate-plan-container .donate-plan-card {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 40px 20px;
+  background-color: #edf5f6;
+  border-radius: 10px;
+  border: 2px solid transparent;
+}
+.donate-plan-card:nth-child(2) {
+  background-color: #ffeeee;
+}
+.donate-plan-card:nth-child(3) {
+  background-color: #fff4d8;
+}
+.donate-plan-card:hover {
+  border: 2px solid black;
+  cursor: default;
+}
 
+.donate-plan-card img {
+  height: 50px;
+  width: 50px;
+}
 
+.donate-plan-card p {
+  font-size: small;
+  color: #707070;
+}
+.about {
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+  row-gap: 50px;
+}
 
+.about .about-contaier {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+}
+
+.about-contaier .about-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.about-content h1 {
+  font-size: 35px;
+  line-height: 35px;
+  padding-bottom: 30px;
+}
+.about-content p {
+  font-size: small;
+  padding-bottom: 20px;
+}
+
+.about-contaier img {
+  width: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
 
 /* shared item */
 section {
   margin-bottom: 80px;
 }
+
 .btn {
   padding: 8px 12px;
   background-color: #ff5c59;
@@ -131,7 +200,7 @@ section {
   color: white;
   border: 2px solid #ff5c59;
 }
-.btn:hover{
+.btn:hover {
   background-color: transparent;
   border: 2px solid #ff5c59;
   transition: 0.3s linear;
@@ -173,6 +242,16 @@ section {
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
   }
+  .donate-plan-container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .about .about-contaier {
+    grid-template-columns: none;
+    grid-template-rows: repeat(1, 1fr);
+  }
+  .about .about-content:nth-child(1) {
+    order: 1;
+  }
 }
 @media screen and (min-width: 576px) and (max-width: 768px) {
   .hero-content {
@@ -189,6 +268,16 @@ section {
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
   }
+  .donate-plan-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+    .about .about-contaier {
+    grid-template-columns: none;
+    grid-template-rows: repeat(1, 1fr);
+  }
+  .about .about-content:nth-child(1) {
+    order: 1;
+  }
 }
 
 @media screen and (min-width: 768px) and (max-width: 992px) {
@@ -196,8 +285,11 @@ section {
     width: 80%;
   }
   .donate-card-container {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 20px;
+  }
+  .donate-plan-container {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 @media screen and (min-width: 992px) and (max-width: 1200px) {
