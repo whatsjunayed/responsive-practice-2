@@ -13,6 +13,14 @@
   font-weight: 400;
   font-style: normal;
 }
+.font-lobster {
+  font-family: "Lobster", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+
 body {
   max-width: 1440px;
   width: 100%;
@@ -62,7 +70,8 @@ body {
 
 .donate,
 .donate-plan,
-.about {
+.about,
+.updates {
   width: 80%;
   margin: 80px auto;
 }
@@ -185,7 +194,35 @@ body {
   object-fit: cover;
   border-radius: 10px;
 }
+.updates .updates-container {
+  background-color: #fff4d8;
+  padding: 40px 0;
+  display: flex;
+  justify-content: center;
+  border-radius: 10px;
+  margin-top: 80px;
+}
+.updates-container input {
+  width: 50%;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  padding: 0 10px;
+}
 
+footer {
+  background-color: #0B0D16;
+  padding:60px 0 ;
+}
+footer h1{
+  text-align: center;
+  color: #FF5C59;
+}
+footer p{
+  text-align: center;
+  color: #D9DBE1;
+  font-size: small;
+}
 /* shared item */
 section {
   margin-bottom: 80px;
@@ -252,6 +289,9 @@ section {
   .about .about-content:nth-child(1) {
     order: 1;
   }
+  .updates-container input {
+    width: 60%;
+  }
 }
 @media screen and (min-width: 576px) and (max-width: 768px) {
   .hero-content {
@@ -271,7 +311,7 @@ section {
   .donate-plan-container {
     grid-template-columns: repeat(2, 1fr);
   }
-    .about .about-contaier {
+  .about .about-contaier {
     grid-template-columns: none;
     grid-template-rows: repeat(1, 1fr);
   }
@@ -290,6 +330,16 @@ section {
   }
   .donate-plan-container {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .about-content h1 {
+    font-size: 25px;
+    line-height: 35px;
+    padding-bottom: 10px;
+  }
+  .about-content p {
+    font-size: smaller;
+    padding-bottom: 10px;
   }
 }
 @media screen and (min-width: 992px) and (max-width: 1200px) {
